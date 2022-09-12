@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MinorPlanetsAPI.Models.AstroidEsentialInfo>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="top" class="top">
+    <h1 class="text-center">Astroid Data</h1>
+    <p class="lead text-center">Welcome to the Asterank Astroid Data App</p>
+    <p><a href="http://www.asterank.com/mpc" class="btn btn-primary btn-lg">Asterlink-API &raquo;</a></p>
+</div>
+
+<div classs="container">
+    <table id="myTable" class="table stripe table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Readable Designation</th>
+                <th scope="col">RMS</th>
+                <th scope="col">Epoch</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var astroid in Model)
+            {
+                <tr>
+                    <td>@astroid.readable_des</td>
+                    <td>@astroid.rms</td>
+                    <td>@astroid.epoch</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#myTable").DataTable(
+                { "ordering": false }
+            );
+        })
+    </script>
+}

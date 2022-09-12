@@ -1,4 +1,5 @@
 ﻿body {
+    margin: 1% 1%;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -21,4 +22,101 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+
+/*   Added CSS    */
+
+div.top h1,
+.top p {
+    color: black;
+}
+
+div.container {
+    border-radius: 6px 6px;
+}
+
+body {
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 6px 6px;
+}
+
+table {
+    border-radius: 6px 6px;
+}
+
+thead {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+th {
+    background-color: gray;
+    color: black;
+}
+
+tr th:first-child {
+    border-top-left-radius: 6px;
+}
+
+tr th:last-child {
+    border-top-right-radius: 6px;
+}
+
+tbody {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 6px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 6px;
+}
+
+td {
+    background-color: black;
+    color: white;
+}
+
+label,
+select,
+div.dataTables_info {
+    color: black !important;
+}
+
+select,
+input {
+    border: 2px solid black !important;
+    border-radius: 3px 10px !important;
+    color: black !important;
+    background-color: white !important;
+}
+
+li a {
+    background-color: white !important;
+    border: 2px solid black !important;
+    border-radius: 3px 10px !important;
+    color: black !important;
+}
+
+hr {
+    border-top-color: black !important;
+}
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+    footer p {
+        flex-basis: auto;
+        color: black;
+    }
+
+p.floatRight {
+    flex-basis: auto;
 }
